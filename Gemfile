@@ -1,24 +1,36 @@
-
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
 
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.2.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 1.5.1'
 gem 'figaro'
 gem 'mysql2'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
-gem 'bcrypt-ruby', '~> 3.0.0' # To use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.1.1' # To use ActiveModel has_secure_password
 
-group :development, :assets do
+gem "simple-navigation", "~> 3.11.0"
+gem 'powerpack' # useful extensions to the standard Ruby classes  https://github.com/bbatsov/powerpack
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+# Use Capistrano for deployment
+gem 'capistrano', group: :development
+# Use debugger
+gem 'debugger', group: [:development, :test]
+
+
+#group :development, :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'compass-rails' , "~> 2.0.alpha.0"
-  gem 'compass-susy-plugin'
-end
+  gem "susy", "~> 2.0.0.alpha.3"
+#end
 
 group :development do
   gem 'better_errors'

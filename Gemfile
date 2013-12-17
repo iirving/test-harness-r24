@@ -3,15 +3,15 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 
 gem 'uglifier', '>= 2.2.1'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'coffee-rails', '~> 4.0.1'
+gem "jquery-rails", "~> 3.0.4"
 gem 'jquery-ui-sass-rails' #jquery-ui no longer included ,doing a sass versin here  :(
 gem "underscore-rails", "~> 1.5.2" #underscore.js asset pipeline provider/wrapper
 gem "activesupport", "~> 4.0.2"
-gem 'turbolinks'
+gem "turbolinks", "~> 2.0.0"
 gem 'jbuilder', '~> 1.5.1'
 gem 'figaro'  # hide sensitive information in ENV environment variables.
-gem 'mysql2'
+gem "mysql2", "~> 0.3.14"
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git' #'~> 3.0.0.0'
 gem 'show_for'
 gem 'bcrypt-ruby', '~> 3.0.0' # To use ActiveModel has_secure_password
@@ -27,7 +27,7 @@ gem "pagedown-bootstrap-rails" ,:git => 'git://github.com/iirving/pagedown-boots
 
 
 gem "i18n", "~> 0.6.5"
-gem "minitest"
+gem "minitest", "~> 5.2.0"
 gem 'therubyracer', require: "v8"
 gem 'rvm-capistrano'
 
@@ -38,10 +38,11 @@ gem 'font-awesome-sass-rails'
 
 gem 'acts_as_singleton'  # Lightweight singleton library for Active Record models.
 
-gem "simple-navigation", "~> 3.11.0"  # doing custom nv not this
-gem 'powerpack' # useful extensions to the standard Ruby classes  https://github.com/bbatsov/powerpack
+gem "simple-navigation", "~> 3.11.0"  # doing custom nav not this, but could be very  useful
+gem "powerpack", "~> 0.0.9" # useful extensions to the standard Ruby classes  https://github.com/bbatsov/powerpack
 
 gem 'ranked-model' # a modern row sorting library built for Rails 3 & 4. It uses ARel aggressively
+#acts is list is preferred
 gem 'acts_as_list'
 
 gem 'multi_fetch_fragments' # makes rendering and caching a collection of template partials easier and faster.
@@ -67,7 +68,7 @@ gem 'debugger', group: [:development, :test]
 #  gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
   gem "compass-rails", "~> 2.0.alpha.0"
   gem "susy", "~> 2.0.0.alpha.3"
-  gem "bootstrap-sass", "~> 2.3.2.2" #boot strap 2.3 DO NOT CHANGE
+  gem "bootstrap-sass", "~> 3.0.3.0"
 #
 
 # group :development do
@@ -115,9 +116,9 @@ end
 
 group :development do  # guard related https://github.com/guard/
   # more plugins https:// github.com/guard/guard/wiki/List-of-available-Guards
- # gem "guard" #, "~> 1.4.0"
-  gem "guard",  :git => 'git://github.com/guard/guard.git' #"~> 2.1.0" ,
-  gem 'coderay', '~> 1.0.9'
+ gem "guard", "~> 2.2.5"
+ # gem "guard",  :git => 'git://github.com/guard/guard.git' #"~> 2.1.0" ,
+  gem "coderay", "~> 1.1.0"
   # gem "coderay", "~> 1.1.0"
    gem 'guard-livereload' # automatically reload your browser when 'view' files are modified. Use rack-livereload or install LiveReload Safari/Chrome extension
    gem 'guard-bundler' # automatically install/update your gem bundle when needed
